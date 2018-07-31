@@ -26,8 +26,10 @@ class Board extends Component {
     const wonClass   = this.props.won ? ` won-${this.props.wonLine}` : '';
     const drawClass  = this.props.draw ? ' draw' : '';
     const boardClass = 'board' + wonClass + drawClass;
+    const stylebtn = {'background-color': 'teal',
+      'color': 'white', 'border': '2px solid black', 'width': '100px', 'height': '40px', 'box-shadow': 'gray 2px 3px'};
     return (
-      <div className={boardClass}>
+      <div className={boardClass} >
         {
           Object.keys(this.props.board)
             .map(rowIndex => {
@@ -45,7 +47,7 @@ class Board extends Component {
         {
           this.props.won || this.props.draw ?
           <p className="startAgain" onClick={this.props.startAgain}>
-            Click to start again!
+              <button style={stylebtn}>Click to start again!</button>
           </p> : false
         }
       </div>

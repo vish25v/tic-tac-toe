@@ -30,8 +30,20 @@
     transform: scale(1);
   }
 }
+.sy-o{
+  background-color: goldenrod;
+}
+.sy-x{
+  background-color: darkolivegreen;
+}
+
 
 svg {
   animation-name: symbol-appear;
   animation-duration: .15s;
+}
+
+
+btn{
+  box-shadow: lightseagreen 2px 3px;
 }

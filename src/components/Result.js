@@ -4,7 +4,10 @@ import {connect} from 'react-redux';
 
 class Result extends Component {
   render () {
-    let result = ''; 
+    let result = '';
+    const style={
+      'font-size': '2rem'
+    };
     if (this.props.turn) {
       result = `It's ${this.props.turn.toUpperCase()}'s turn.`;
     }
@@ -15,7 +18,7 @@ class Result extends Component {
     }
     return (
       <div>
-        <p>
+        <p style={style}>
           {result}
         </p>
       </div>
